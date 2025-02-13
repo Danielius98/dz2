@@ -39,9 +39,18 @@ h1 {
     position: static;
 }
 
+.input-row button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Плавные переходы для всех свойств */
+}
+
 .input-row {
     display: flex;
     margin-bottom: 20px;
+
 }
 
 .input-row input[type="text"] {
@@ -63,13 +72,37 @@ h1 {
 .create-button {
     background-color: #e0e0e0;
     color: #333;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 ;
 }
+
+.create-button:hover {
+    background-color: #d1d1d1;
+    transform: scale(1.1);
+}
+
+.create-button:active {
+    transform: scale(1);
+    background-color: #b0b0b0;
+}
+
+
+
+
 
 .clear-button {
     background-color: #d9534f;
     color: #fff;
-    border-radius: 5px;
+    border-radius:0 5px 5px 0;
+}
+
+.clear-button:hover {
+    background-color: #c9302c;
+    transform: scale(1.1);
+}
+
+.clear-button:active {
+    transform: scale(1);
+    background-color: #ac2925;
 }
 
 .todo-list {
@@ -108,13 +141,59 @@ h1 {
     text-decoration: none;
 }
 
-.todo-item button.delete {
-    color: #d9534f;
+
+
+.button-nav button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.todo-item button.complete {
-    color: #5cb85c;
+
+.button-nav button:hover {
+    transform: scale(1.2);
+    color: #fff;
+
 }
+
+
+.button-nav button:active {
+    transform: scale(1);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.button-nav .complete {
+    color: #5cb85c;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-nav .complete:hover {
+    color: #4cae4c;
+}
+
+.button-nav .complete:active {
+    color: #3d8b3d;
+}
+
+.button-nav .delete {
+    color: #d9534f;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-nav .delete:hover {
+    color: #c9302c;
+}
+
+.button-nav .delete:active {
+    color: #ac2925; 
+}
+
+
+
 
 .todo-item button {
     text-decoration: none;
